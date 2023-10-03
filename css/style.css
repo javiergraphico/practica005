@@ -87,7 +87,26 @@ h2{
 .nav__link{
   color: var(--black-color);
   font-size: 1.2rem;
+  position: relative;
 }
+.nav__link::after{
+  content: '';
+  position: absolute;
+  background-color: var(--magenta-color);
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: -5px;
+  opacity: 0;
+}
+.nav__link.nav__active {
+  color: var(--magenta-color);
+}
+.nav__link.nav__active::after,
+.nav__link:hover::after{
+  opacity: 0.9;
+}
+
 .btn__login{
   border: 0;
   background-color: transparent;
@@ -225,6 +244,7 @@ h2{
 }
 .home__image{
   width: 100%;
+  border-radius: 1.25rem;
   
 }
 @media (min-width: 668px){
@@ -277,6 +297,7 @@ h2{
   height: 240px;
   text-align: center;
   color: var(--white-color);
+  border-radius: 1.25rem;
 }
 .home__card__number:nth-child(1){
   background-color: var(--blue-color);
@@ -334,6 +355,7 @@ h2{
   background-color: var(--white-color);
   height: 490px;
   padding: 3.5rem 2.5rem;
+  border-radius: 1.25rem;
 
   @media (min-width: 668px){
     height: 430px;
@@ -396,6 +418,9 @@ h2{
   line-height: 1.5;
   padding-bottom: 2rem;
   color: var(--gray-color-normal);
+}
+.service__img{
+  border-radius: 1.25rem;
 }
 .service__right{
   max-width: 800px;
@@ -465,7 +490,7 @@ h2{
   
 }
 .testimonios__h2{
-  padding: 2rem 0;
+  padding: 5rem 0 2rem 0;
 }
 .testimonios__grid{
   display: grid;
@@ -474,6 +499,7 @@ h2{
 
 .testimonios__grid__left{
   position: relative;
+  
 }
 .testimonios__grid__left::after{
   content: "";
@@ -484,6 +510,9 @@ h2{
   left: 0;
   width: 100%;
   height: 100%;
+}
+.testimonios__img{
+  border-radius: 1.25rem;
 }
 
 .testimonios__grid__right{
@@ -594,6 +623,9 @@ h2{
   right: 270px;
   bottom: -100px;
 }
+.features3__img{
+  border-radius: 20px;
+}
 @media (min-width: 678px){
   .features2__items{
     width: 90%;
@@ -618,11 +650,15 @@ h2{
   background-color: var(--gray-color);
 }
 .blog__h2{
+  padding-top: 5rem;
   padding-bottom: 2rem;
 }
 .blog__article__grid{
   display: grid;
   grid-template-columns: repeat(1fr);
+}
+.blog__img{
+  border-radius: 1.25rem;
 }
 .blog__content{
   padding-bottom: 2.5rem;
